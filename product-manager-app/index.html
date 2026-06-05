@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager | CRUD with POST, PUT, DELETE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📦 Product Manager</h1>
+            <p class="subtitle">Simulasi CRUD dengan HTTP POST • PUT • DELETE (Vanilla JS)</p>
+        </header>
+
+        <!-- Form Tambah / Edit -->
+        <div class="form-card">
+            <h2 id="form-title">➕ Tambah Produk Baru</h2>
+            <form id="product-form">
+                <input type="hidden" id="edit-id" value="">
+                
+                <div class="form-group">
+                    <label for="nama">📝 Nama Produk</label>
+                    <input type="text" id="nama" placeholder="Contoh: MacBook Pro M3" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="harga">💰 Harga (Rp)</label>
+                    <input type="number" id="harga" placeholder="Contoh: 25000000" required>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" id="submit-btn" class="btn-primary">💾 Simpan Produk</button>
+                    <button type="button" id="cancel-edit" class="btn-secondary" style="display: none;">❌ Batal Edit</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Daftar Produk -->
+        <div class="product-list">
+            <div class="list-header">
+                <h2>📋 Daftar Produk</h2>
+                <span class="product-count" id="product-count">0 produk</span>
+            </div>
+            <div id="product-container">
+                <div class="loading">⏳ Memuat data produk...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
